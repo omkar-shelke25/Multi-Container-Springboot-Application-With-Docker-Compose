@@ -147,13 +147,13 @@ Use the following queries to test the Spring Boot application:
    **Body** (JSON):
    ```json
    {
-     "firstName": "Emily",
-     "lastName": "Davis",
-     "email": "emily.davis@example.com",
-     "department": "Sales"
+     "firstName": "John",
+     "lastName": "Doe",
+     "email": "john.doe@example.com",
+     "department": "Engineering"
    }
    ```
-
+![alt text](assets/post.png)
 2. **Get All Employees**  
    **Request**: `GET`  
    **URL**: `http://localhost:8081/api/employees`  
@@ -161,6 +161,7 @@ Use the following queries to test the Spring Boot application:
 3. **Get Employee by ID**  
    **Request**: `GET`  
    **URL**: `http://localhost:8081/api/employees/{id}`  
+   
 4. **Update Employee by ID**  
    **Request**: `PUT`  
    **URL**: `http://localhost:8081/api/employees/{id}`  

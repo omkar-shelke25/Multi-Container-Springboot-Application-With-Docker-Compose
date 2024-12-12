@@ -19,7 +19,7 @@ This project demonstrates how to containerize a Spring Boot application with a P
   1. Build dependencies and compile the application.
   2. Create the runtime image.
 - [docker-compose.yml](springboot-compose/docker-compose.yml): Orchestrates the Spring Boot application and PostgreSQL database as separate services.
-- [**Spring Boot Application](springboot-compose):** Implements CRUD operations on the database.
+- [Spring Boot Application](springboot-compose):** Implements CRUD operations on the database.
 
 ---
 

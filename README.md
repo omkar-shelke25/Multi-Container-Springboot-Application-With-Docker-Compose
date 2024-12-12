@@ -70,7 +70,7 @@ To test the Dockerfile, run:
 ```bash
 docker build -t springboot-app .
 ```
-
+![alt text](assets/build-image.png)
 ---
 
 ## Docker Compose File
@@ -122,7 +122,7 @@ To build and run the setup:
 ```bash
 docker-compose up --build
 ```
-
+![alt text](assets/compose.png)
 ---
 
 ### Verifying the Application
@@ -132,8 +132,8 @@ After running the containers, you can check the running containers using:
 ```bash
 docker ps
 ```
-
 This command will show two containers running: one for the Spring Boot application and one for PostgreSQL. Both will be connected to each other.
+![alt text](assets/container.png)
 
 You can access the Spring Boot application at [http://localhost:8081](http://localhost:8081).
 
@@ -141,15 +141,7 @@ You can access the Spring Boot application at [http://localhost:8081](http://loc
 
 Use the following queries to test the Spring Boot application:
 
-1. **Get All Employees**  
-   **Request**: `GET`  
-   **URL**: `http://localhost:8081/api/employees`  
-
-2. **Get Employee by ID**  
-   **Request**: `GET`  
-   **URL**: `http://localhost:8081/api/employees/{id}`  
-
-3. **Create Employee**  
+1. **Create Employee**  
    **Request**: `POST`  
    **URL**: `http://localhost:8081/api/employees`  
    **Body** (JSON):
@@ -162,6 +154,13 @@ Use the following queries to test the Spring Boot application:
    }
    ```
 
+2. **Get All Employees**  
+   **Request**: `GET`  
+   **URL**: `http://localhost:8081/api/employees`  
+
+3. **Get Employee by ID**  
+   **Request**: `GET`  
+   **URL**: `http://localhost:8081/api/employees/{id}`  
 4. **Update Employee by ID**  
    **Request**: `PUT`  
    **URL**: `http://localhost:8081/api/employees/{id}`  
@@ -212,7 +211,3 @@ Use the following queries to test the Spring Boot application:
 ## Conclusion
 
 This project showcases an efficient way to containerize and manage a Spring Boot application with a PostgreSQL database using Docker and Docker Compose. The setup is lightweight, scalable, and ideal for local development or small-scale deployments.
-
---- 
-
-Let me know if you need any further adjustments or additions!

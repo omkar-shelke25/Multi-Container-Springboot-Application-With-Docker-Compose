@@ -29,7 +29,6 @@ jobs:
           path: springboot-compose
       - name: compile the code
         run: |
-          ls
           cd springboot-compose
           mvn install compile
       

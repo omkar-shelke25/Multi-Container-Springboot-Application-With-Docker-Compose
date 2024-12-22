@@ -27,6 +27,12 @@ jobs:
         uses: actions/checkout@v4.2.2
         with:
           path: springboot-compose
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.6.0
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          
       - name: compile the code
         run: |
           cd springboot-compose

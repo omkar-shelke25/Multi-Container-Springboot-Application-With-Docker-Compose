@@ -6,7 +6,7 @@ on:
 
 jobs:
   compile-and-build:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     services: 
       postgres:
         image: postgres:15.10-alpine3.21

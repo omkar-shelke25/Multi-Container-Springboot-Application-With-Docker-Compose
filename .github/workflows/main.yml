@@ -1,4 +1,4 @@
-name: continuos integration for springboot applications
+name: Continuous Integration for Spring Boot Applications
 
 on:
   push:
@@ -23,21 +23,20 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: checkout the code
+      - name: Checkout the code
         uses: actions/checkout@v4.2.2
         with:
           path: springboot-compose
+
       - name: Setup Java JDK
         uses: actions/setup-java@v4.6.0
         with:
           distribution: 'temurin'
           java-version: '21'
-          
-      - name: compile the code
+
+      - name: Install Maven
+        run: sudo apt-get update && sudo apt-get install -y maven
+
+      - name: Compile the code
         working-directory: springboot-compose
         run: mvn install
-      
-      
-
-      
-  

@@ -31,10 +31,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-
-      - name: Install Maven
-        run: sudo apt-get update && sudo apt-get install -y maven
-
       - name: List files at root
         run: ls -al
 

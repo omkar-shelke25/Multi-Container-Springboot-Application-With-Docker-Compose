@@ -9,7 +9,12 @@ jobs:
     steps:
       - name: chekout the code
         uses: actions/checkout@v4.2.2
-      - name: to check where its is download
+      - name: compile the code before testing
         run: |
-          ls
-          pwd
+          cd springboot-compose
+          mvn install
+          mvn compile
+        
+          
+      
+      

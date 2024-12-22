@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: chekout the code
         uses: actions/checkout@v4.2.2
+      - name: java setup for test appllication
+        uses: actions/setup-java@v4
       - name: compile the code before testing
         run: |
           cd springboot-compose

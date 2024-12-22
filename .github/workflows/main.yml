@@ -30,7 +30,7 @@ jobs:
       - name: compile the code
         run: |
           ls
-          cd  springboot-compose
+          cd springboot-compose
           mvn install compile
       
         

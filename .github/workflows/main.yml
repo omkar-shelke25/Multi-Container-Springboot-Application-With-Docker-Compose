@@ -1,1 +1,39 @@
+name: continuos integration for springboot applications
 
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  compile-and-build:
+    runs-on: ubuntu:latest
+    services: 
+      postgres:
+        image: postgres:15.10-alpine3.21
+        env: 
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: employee_db
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4.2.2
+        with:
+          path: springboot-compose
+      - name: compile the code
+        run: |
+          mvn install compile
+      
+        
+      
+      
+
+      
+  

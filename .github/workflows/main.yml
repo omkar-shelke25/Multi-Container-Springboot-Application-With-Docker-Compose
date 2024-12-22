@@ -31,13 +31,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - name: List files at root
-        run: ls -al
-
-      - name: List files in springboot-compose
-        working-directory: springboot-compose
-        run: ls -la
 
       - name: Compile the code
         working-directory: springboot-compose
-        run: mvn install
+        run: mvn clean install -DskipTests

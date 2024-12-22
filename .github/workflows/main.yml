@@ -17,8 +17,7 @@ jobs:
       - name: compile the code before testing
         run: |
           cd springboot-compose
-          mvn install
-          mvn compile
+          mvn install compile
         
           
       

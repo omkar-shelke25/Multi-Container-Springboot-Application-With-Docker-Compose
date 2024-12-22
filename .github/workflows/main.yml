@@ -19,7 +19,7 @@ jobs:
           sudo apt install postgresql postgresql-contrib
           sudo systemctl start postgresql
           sudo systemctl enable postgresql
-          psql -U postgres
+          psql -U postgres -P postgres
           ALTER USER username postgres WITH PASSWORD 'postgres';
       
       - name: compile the code before testing

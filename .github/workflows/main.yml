@@ -34,4 +34,4 @@ jobs:
 
       - name: Compile the code
         working-directory: springboot-compose
-        run: mvn clean install -DskipTests
+        run: mvn clean install

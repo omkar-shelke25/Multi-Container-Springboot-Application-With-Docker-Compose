@@ -34,9 +34,8 @@ jobs:
           java-version: '21'
           
       - name: compile the code
-        run: |
-          cd springboot-compose
-          ls
+        working-directory: springboot-compose
+        run: mvn install
       
       
 

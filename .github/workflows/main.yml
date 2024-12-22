@@ -11,6 +11,9 @@ jobs:
         uses: actions/checkout@v4.2.2
       - name: java setup for test appllication
         uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
       - name: compile the code before testing
         run: |
           cd springboot-compose

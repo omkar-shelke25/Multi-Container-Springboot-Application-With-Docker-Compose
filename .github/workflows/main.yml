@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: chekout the code
         uses: actions/checkout@v4.2.2
+        with:
+          path: springboot-compose
       - name: to check where its is download
         run: |
           ls
